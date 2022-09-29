@@ -22,7 +22,7 @@ public class PlayerMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        FlipSpite();
     }
 
     private void FixedUpdate()
@@ -48,5 +48,22 @@ public class PlayerMovementScript : MonoBehaviour
         //Set velocity
         rb.velocity = inputDirection * speed;
     }
+
+    void FlipSpite()
+    {
+        
+        Debug.Log(inputDirection.x);
+        if (sprite.flipX && inputDirection.x < 0)
+        {
+            Debug.Log("idk1");
+            sprite.flipX = true;
+        }
+        else if (sprite.flipX && inputDirection.x > 0)
+        {
+            Debug.Log("idk2");
+            sprite.flipX = false;
+        }
+    }
+    
 
 }
