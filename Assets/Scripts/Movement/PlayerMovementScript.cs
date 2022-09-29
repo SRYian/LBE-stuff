@@ -34,15 +34,15 @@ public class PlayerMovementScript : MonoBehaviour
     private void Move()
     {   
         //Decalre variable for capturing input(unity eventsystem)
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
         //Debug.Log(horizontal + " " + vertical);
         //Make a full stop
-        if (horizontal==0 && vertical==0)
-        {
-            rb.velocity = new Vector2(0,0);
-            return;
-        }
+        // if (horizontal==0 && vertical==0)
+        // {
+        //     rb.velocity = new Vector2(0,0);
+        //     return;
+        // }
         //Normalize input directions
         inputDirection = new Vector2(horizontal, vertical).normalized;
         //Set velocity
