@@ -28,7 +28,6 @@ public class PlayerMovementScript : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-        
     }
 
     private void Move()
@@ -52,18 +51,17 @@ public class PlayerMovementScript : MonoBehaviour
     void FlipSpite()
     {
         
-        Debug.Log(inputDirection.x);
-        if (sprite.flipX && inputDirection.x < 0)
+        Debug.Log(inputDirection.x+" "+sprite.flipX);
+        if (inputDirection.x < 0)
         {
             Debug.Log("idk1");
-            sprite.flipX = true;
-        }
-        else if (sprite.flipX && inputDirection.x > 0)
-        {
-            Debug.Log("idk2");
             sprite.flipX = false;
         }
+        else if (inputDirection.x > 0)
+        {
+            Debug.Log("idk2");
+            sprite.flipX = true;
+        }
     }
-    
 
 }
