@@ -43,9 +43,36 @@ Klik kanan di window Project ~> Create ~> Scene. Selamat, scene baru telah terbu
 
 ## making an object (leads to player)
 
-here
+Sekarang, mari kita buat suatu object yang akan menjadi player kita nantinya.
+Di tab Hierarchy, klik kanan ~> Create Empty. Pilihan tersebut akan membuat suatu objek (dengan default name GameObject) yang tidak berisi apa-apa.
 
-## object's components
+![image](https://user-images.githubusercontent.com/80830860/194211227-5d75139a-f40c-4ea4-8f68-a16b8af6aa6b.png)
+
+![image](https://user-images.githubusercontent.com/80830860/194211605-5f81ca87-ed6e-4e67-af43-5d47ead0532e.png)
+
+Waduh, objeknya terlihat transparan di tab Scene maupun Game, ya? Tidak apa-apa, ayo kita beri sesuatu di objek tersebut agar dapat terlihat di kedua tab tersebut!
+
+Klik GameObject dari tab Hierarchy. Tab Inspector akan memberi tahu kita komponen apa saja yang telah terikat pada object tersebut.
+
+Kemudian klik "Add Component" dan ketik "Sprite Renderer" pada tempat yang telah disediakan, dan klik Sprite Renderer.
+
+![image](https://user-images.githubusercontent.com/80830860/194212154-48577817-7740-483b-bb7b-f5a7e5f023f7.png)
+
+Komponen Sprite Renderer tersebut bekerja sebagaimana yang telah tertulis di namanya, untuk me-render sprite yang tersedia.
+
+Sekarang, kembali ke tab Assets dan buatlah folder bernama "Sprites". Kemudian, masukkan suatu gambar yang ingin kalian gunakan sebagai sprite dari objek yang akan kita gunakan nantinya ke folder tersebut.
+
+![image](https://user-images.githubusercontent.com/80830860/194212488-7b7f9115-642c-46fa-a73c-6161ee3503a7.png)
+
+Nah, bagaimana caranya agar objek tersebut menggunakan gambar yang telah kita masukkan tadi?
+
+Klik dan tahan gambar tersebut dan drag ke tempat "Sprite" di komponen Sprite Renderer dari objek.
+
+![image](https://user-images.githubusercontent.com/80830860/194212757-65297856-01f5-4c8b-bd12-d33f2ce6b3a8.png)
+
+Hore! Objek tersebut sekarang memiliki gambar yang dapat terlihat di tab Scene dan Game~
+
+## object's components (sprite renderer's already in the previous section)
 
 here
 
