@@ -1,8 +1,17 @@
 # LBE-stuff
 
-Repo temporary untuk LBE GIGA
-
-# Readme here
+## Contents
+1. [Unity-Installation](#unity-installing-just-in-case--launch-unity-hub)
+2. [Project-Setup](#making-the-project-2d)
+3. [Scene-Creation](#first-scene)
+4. [Unity-Objects](#objects-components-sprite-renderers-already-in-the-previous-section)
+5. [Player-Movement](#making-the-players-script)
+6. [Player-Movement testing](#test-the-player-script-in-this-case-involves-the-players-movement)
+7. [Tilemap-Setup](#configuring-tilemap)
+8. [Tilemap-Drawing](#making-the-map-using-the-walls-from-tilemap)
+9. [Map-Collision](#wallcoll-scripts--finish-line-triggers)
+10. [Finishing-Build](#build-to-desired-platform-pc-for-this-game)
+10. [ඞ](#amogus-sussy-baka)
 
 ## Unity Installing (just in case) + launch unity hub
 
