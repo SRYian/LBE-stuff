@@ -1,4 +1,4 @@
-# LBE--stuff
+# LBE-stuff
 
 Repo temporary untuk LBE GIGA
 
@@ -76,7 +76,7 @@ Hore! Objek tersebut sekarang memiliki gambar yang dapat terlihat di tab Scene d
 
 here
 
-## making the player's script
+## making the player's script 
 
 here
 
@@ -86,11 +86,56 @@ here
 
 ## configuring tilemap
 
-here
+Nah, beralih ke bagian tilemap. Pada tab Hierarchy, klik kanan, select 2D Object ~> Tilemap ~> Rectangular
+
+![image](https://user-images.githubusercontent.com/92420947/194599776-8083733e-a69f-40cd-82c4-a953f59216e2.png)
+
+Sekarang muncul gameobject dan gridline pada scene
+
+![image](https://user-images.githubusercontent.com/92420947/194601411-70335c6b-713c-4d7a-a21b-a9564bbe7773.png)
+
+Selanjutnya, tilemap sudah dibuat tapi masih belum memiliki isi. Untuk mengisi tilemap, diperlukan sebuah brush yang diakses lewat Tile Palete.
+
+Untuk membuka Tile Palette, pada menu paling atas(File, etc. ) klik Window ~> 2D ~> Tile Palette
+
+![image](https://user-images.githubusercontent.com/92420947/194599551-94f5586a-63c2-4014-9341-c603f3f78618.png)
+
+Setelah tile palette terbuka, klik Create New Palette dan beri nama palette yang akan dibuat. Lalu klik Create dan save Palette pada folder baru bernama Tilemaps
+
+![image](https://user-images.githubusercontent.com/92420947/194603837-4acf9885-cf44-4e6b-9f41-09cf7a62e2b2.png)
+
+Akhirnya sampai kepada langkah untuk membuat brush. Pada panel Project, cari asset yang bernama square. Hasil search yang tampil merupakan sprite bawaan unity yang akan digunakan untuk kebutuhan tilemap.
+
+![image](https://user-images.githubusercontent.com/92420947/194605583-44504678-4424-46e7-ba1d-d54f602e452a.png)
+
+Selanjutnya, drag and drop image square kedalam panel Tile Palette, save asset pada folder Tilemaps. 
+
+Pastikan sprite square memiliki tipe collider yang tepat dengan menseleksi spritenya pada panel Projects, membuka inspector, dan mengubah collider type menjadi sprite
+![image](https://user-images.githubusercontent.com/92420947/194613241-540a4016-af0b-4d6a-9202-63114b82e498.png)
+
+
+YAY! Tilemap berhasil dibuat!
 
 ## making the map using the walls from tilemap
 
-here
+Saatnya menggambar tilemap!
+
+Tunggu dulu! Sebelum menggambar, pastikan brush yang benar sudah terpilih.
+Pada panel Tile Palette klik "Paint with active brush" (shortcut key B) untuk memilih brush yang digunakan untuk menggambar tilemap. 
+
+![image](https://user-images.githubusercontent.com/92420947/194611455-3472d6b3-804a-48cb-9b10-485b01fbb297.png)
+
+Jangan lupa untuk memilih tile box yang sudah ada pada Tile Palette dengan cara melakukan klik kiri. 
+
+Setelah brush terpilih, saatnya menggambar pada scene!
+Buka kembali panel Scene, dengan brush yang sudah terpilih sprite box dapat ditempatkan dimanapun dalam grid layaknya menggunakan kuas.
+
+![image](https://user-images.githubusercontent.com/92420947/194616094-78202584-e5de-4096-9725-d904edbc9b5c.png)
+
+Penggambaran tile inilah yang akan digunakan untuk membangun map maze.
+
+Berikut penggambaran map yang akan digunakan untuk bagian selanjutnya tutorial ini
+![image](https://user-images.githubusercontent.com/92420947/194616768-b61af141-f284-46f1-a6b9-7e2c581794a9.png)
 
 ## wallcoll scripts + finish line (triggers)
 
