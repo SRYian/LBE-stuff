@@ -83,7 +83,7 @@ Hore! Objek tersebut sekarang memiliki gambar yang dapat terlihat di tab Scene d
 
 ## object's components (sprite renderer's already in the previous section)
 
-here - dont forget player scale 0.4 and player tag
+here - rb & collider dont forget player scale 0.4 and player tag
 
 ## making the player's script 
 
@@ -164,6 +164,9 @@ public class PlayerMovementScript : MonoBehaviour
 ## test the player script (in this case involves the player's movement)
 
 Untuk mencoba player script yang telah dibuat, klik GameObject player, kemudian klik "Add Component" dan ketik "PlayerMovementScript.cs" pada tempat yang telah disediakan, dan klik scriptnya.
+
+![image](https://user-images.githubusercontent.com/92420947/194630433-4b880b92-5d3c-46ef-9cb7-ce1771a782ce.png)
+
 Selamat, script telah ditambahkan dan sekarang player dapat bergerak sesuai input keyboard!
 
 ![image](https://im2.ezgif.com/tmp/ezgif-2-835e293293.gif)
