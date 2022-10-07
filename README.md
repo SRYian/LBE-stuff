@@ -83,15 +83,90 @@ Hore! Objek tersebut sekarang memiliki gambar yang dapat terlihat di tab Scene d
 
 ## object's components (sprite renderer's already in the previous section)
 
-here
+here - dont forget player scale 0.4 and player tag
 
 ## making the player's script 
 
-here
+Saatnya coding 💀
+
+Bukalah tab Assets dan buatlah folder bernama "Scripts". Dalam folder scripts, buatlah folder lagi yang bernama "Movement".
+Didalam folder Movement klik kanan ~> Create ~> C# Script dan namakan script PlayerMovementScript.cs.
+![image](https://user-images.githubusercontent.com/92420947/194622251-7334b46e-71ab-4c41-bcc2-ca4b4ccb4f4c.png)
+
+Kemudian, klik dua kali script tersebut untuk membukanya pada Visual Studio.
+Setelah terbuka, isikan script dengan kode berikut
+
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerMovementScript : MonoBehaviour
+{
+
+    private Rigidbody2D rb;
+    private SpriteRenderer sprite;
+    private Vector2 inputDirection;
+    [SerializeField]private float speed=3.0f;
+    
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //Get component from the objects attached
+        rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        FlipSpite();
+    }
+
+    private void FixedUpdate()
+    {
+        Move();
+    }
+
+    private void Move()
+    {   
+        //DeclAre variable for capturing input(unity eventsystem)
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        //Normalize input directions
+        inputDirection = new Vector2(horizontal, vertical).normalized;
+        //Set velocity
+        rb.velocity = inputDirection * speed;
+    }
+
+    void FlipSpite()
+    {
+        
+        Debug.Log(inputDirection.x+" "+sprite.flipX);
+        if (inputDirection.x < 0)
+        {
+            Debug.Log("idk1");
+            sprite.flipX = false;
+        }
+        else if (inputDirection.x > 0)
+        {
+            Debug.Log("idk2");
+            sprite.flipX = true;
+        }
+    }
+
+}
+
+```
 
 ## test the player script (in this case involves the player's movement)
 
-here
+Untuk mencoba player script yang telah dibuat, klik GameObject player, kemudian klik "Add Component" dan ketik "PlayerMovementScript.cs" pada tempat yang telah disediakan, dan klik scriptnya.
+Selamat, script telah ditambahkan dan sekarang player dapat bergerak sesuai input keyboard!
+
+![image](https://im2.ezgif.com/tmp/ezgif-2-835e293293.gif)
 
 ## configuring tilemap
 
