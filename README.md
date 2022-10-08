@@ -4,7 +4,7 @@
 1. [Unity-Installation](#unity-installing-just-in-case--launch-unity-hub)
 2. [Project-Setup](#making-the-project-2d)
 3. [Scene-Creation](#first-scene)
-4. [Unity-Objects](#objects-components-sprite-renderers-already-in-the-previous-section)
+4. [Unity-Object-Component](#objects-components-sprite-renderers-already-in-the-previous-section)
 5. [Player-Movement](#making-the-players-script)
 6. [Player-Movement testing](#test-the-player-script-in-this-case-involves-the-players-movement)
 7. [Tilemap-Setup](#configuring-tilemap)
@@ -82,6 +82,40 @@ Klik dan tahan gambar tersebut dan drag ke tempat "Sprite" di komponen Sprite Re
 Hore! Objek tersebut sekarang memiliki gambar yang dapat terlihat di tab Scene dan Game~
 
 ## object's components (sprite renderer's already in the previous section)
+
+Nah, objek-nya sudah terlihat di tab Scene dan Game, kan? Sekarang, ayo kita lanjutkan dengan penambahan beberapa component ke object tersebut~
+
+Sebelumnya, setting dulu tag object ini di tab Inspector menjadi "Player", dan setting scale X dan Y-nya menjadi 0.4~ (Z tidak perlu karena ini game 2D xixixi)
+
+![image](https://user-images.githubusercontent.com/80830860/194721354-22ce200e-5ae0-483f-96f3-094014a3674c.png)
+
+![image](https://user-images.githubusercontent.com/80830860/194721586-7d4bff15-877d-4bfc-994b-ac96f84d4ec9.png)
+
+Selanjutnya, ayo kita tambahkan RigidBody2D. Langkah-nya sama seperti sebelumnya saat menambahkan Sprite Renderer yaa~
+
+![image](https://user-images.githubusercontent.com/80830860/194721208-f66950a3-37fb-44be-9ab1-14f9211d1005.png)
+
+Kemudian, setting Gravity Scale-nya menjadi 0 agar objek tersebut tidak jatuh (Kita kan mau buat maze, masa ga digerakin tiba-tiba jatuh sendiri? :D).
+
+![image](https://user-images.githubusercontent.com/80830860/194721307-4cb62490-e412-4a9c-a7d5-ec5c2bba7a7b.png)
+
+Satu lagi, object ini belum mempunyai hitbox untuk dapat menyentuh object lainnya. Oleh karena itu, kita butuh component yang bernama "Collider 2D". Collider ini tersedia dalam banyak bentuk, namun karena sprite yang sedang digunakan adalah lingkaran, maka collider yang akan digunakan adalah "Circle Collider 2D"~
+
+![image](https://user-images.githubusercontent.com/80830860/194721453-2543338f-3603-47ca-86c8-f2725cd79671.png)
+
+Wah, tapi kok hitbox-nya lebih besar daripada sprite yang ada? Ayo kita perbaiki dengan me-resize hitbox-nya!
+
+![image](https://user-images.githubusercontent.com/80830860/194721464-6f7990e8-9972-4d29-8b94-ff95807c793a.png)
+
+Klik "Edit Collider" dan akan muncul 4 titik masing-masing di atas, bawah, kiri, dan kanan lingkaran hijau. Gunakan titik tersebut untuk me-resize hitbox-nya~
+
+Before?
+
+![image](https://user-images.githubusercontent.com/80830860/194721507-0a44e142-e4cd-453c-b616-1e193176233c.png)
+
+After!
+
+![image](https://user-images.githubusercontent.com/80830860/194721627-f4fbe6a5-d00f-4652-8f41-9343766cad9b.png)
 
 here - rb & collider dont forget player scale 0.4 and player tag
 
