@@ -117,8 +117,6 @@ After!
 
 ![image](https://user-images.githubusercontent.com/80830860/194721627-f4fbe6a5-d00f-4652-8f41-9343766cad9b.png)
 
-here - rb & collider dont forget player scale 0.4 and player tag
-
 ## making the player's script 
 
 Saatnya coding 💀
