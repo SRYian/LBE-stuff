@@ -22,31 +22,46 @@ public class PlayerMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        FlipSpite();
     }
 
     private void FixedUpdate()
     {
         Move();
-        
     }
 
     private void Move()
     {   
         //Decalre variable for capturing input(unity eventsystem)
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
         //Debug.Log(horizontal + " " + vertical);
         //Make a full stop
-        if (horizontal==0 && vertical==0)
-        {
-            rb.velocity = new Vector2(0,0);
-            return;
-        }
+        // if (horizontal==0 && vertical==0)
+        // {
+        //     rb.velocity = new Vector2(0,0);
+        //     return;
+        // }
         //Normalize input directions
         inputDirection = new Vector2(horizontal, vertical).normalized;
         //Set velocity
         rb.velocity = inputDirection * speed;
+    }
+
+    void FlipSpite()
+    {
+        
+        Debug.Log(inputDirection.x+" "+sprite.flipX);
+        if (inputDirection.x < 0)
+        {
+            Debug.Log("idk1");
+            sprite.flipX = false;
+        }
+        else if (inputDirection.x > 0)
+        {
+            Debug.Log("idk2");
+            sprite.flipX = true;
+        }
     }
 
 }
