@@ -117,6 +117,11 @@ After!
 
 ![image](https://user-images.githubusercontent.com/80830860/194721627-f4fbe6a5-d00f-4652-8f41-9343766cad9b.png)
 
+Selamat! Hitbox telah terbuat... namun circle ternyata overrated jadi ayo kita jadikan amogus :3
+Gunakan apa yang telah dipelajari untuk mencapai hasil dibawah ini~
+
+![image](https://user-images.githubusercontent.com/80830860/194741453-64dff9c5-5b72-403c-9015-caf8b449fe79.png)
+
 ## making the player's script 
 
 Saatnya coding 💀
