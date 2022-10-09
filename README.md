@@ -11,7 +11,7 @@
 8. [Tilemap-Drawing](#making-the-map-using-the-walls-from-tilemap)
 9. [Map-Collision](#wallcoll-scripts--finish-line-triggers)
 10. [Finishing-Build](#build-to-desired-platform-pc-for-this-game)
-10. [ඞ](#amogus-sussy-baka)
+10. [ඞ](#the-end)
 
 ## Unity Installing (just in case) + launch unity hub
 
@@ -381,4 +381,7 @@ Klik platform yang diinginkan (untuk kesempatan kali ini, gunakan "Windows, Mac,
 
 Sudah ter-built? Coba aplikasimu dengan menjalankan file yang bernama sama dengan project-mu tadi!
 
-# amogus sussy baka
+# The End
+That's all folks!
+![gambar](https://user-images.githubusercontent.com/92420947/194773040-361d5071-5575-43e1-ab90-bd667b024366.png)
+
