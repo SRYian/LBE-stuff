@@ -263,10 +263,122 @@ Berikut penggambaran map yang akan digunakan untuk bagian selanjutnya tutorial i
 
 ## wallcoll scripts + finish line (triggers)
 
-here
+Player telah terbuat, map telah terbuat, apa ya yang kurang? Kalau dicoba, saat player menyentuh salah satu dinding, player akan menembus dinding tersebut dan tidak terjadi apa-apa.
+
+Maka, agar lebih menantang, buatlah script WallCollider.cs agar jika player menyentuh dinding tersebut, game akan langsung berhenti dan pindah ke scene lain. Dalam kasus ini, pemain akan langsung kalah saat menyentuh dinding tersebut.
+
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class WallCollider : MonoBehaviour
+{
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if (other.tag == "Player")  
+        {
+            Debug.Log("wall");
+            SceneManager.LoadScene("Dying Screen");
+        }
+    }
+}
+```
+Debug.Log disitu hanya akan sebagai tes saat dijalankan di Unity apakah player menyentuh dinding tersebut atau tidak.
+
+Dan juga terdapat SceneManager.LoadScene untuk me-load scene lain saat dinding tersebut disentuh oleh player.
+
+Berikut merupakan scene dimana saat player menyentuh dinding yang tidak seharusnya disentuh, dalam kata lain Dying Screen.
+
+![image](https://user-images.githubusercontent.com/80830860/194742057-90ea0eb0-7526-418e-8524-bd434d82d782.png)
+
+Bagaimana cara membuatnya? Karena Scene Making telah terdapat caranya di atas tadi, yuk langsung dibuat scene-nya dan berikut merupakan cara membuat scene yang terdapat button didalamnya.
+
+### Dying Screen and Finish Screen
+
+Pertama, buatlah script agar button yang akan kita buat nanti dapat berfungsi.
+
+```C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class DyingScreen : MonoBehaviour
+{
+    public void RetryButton()
+    {
+        Debug.Log("retry");
+        SceneManager.LoadScene("Playing Scene");
+    }
+
+    public void ExitButton()
+    {
+        Application.Quit();
+        Debug.Log("exit");
+    }
+}
+```
+
+Di script atas, terdapat dua button yang akan kita gunakan nanti, yaitu Retry dan Exit. Untuk Retry, langsung dapat menggunakan SceneManager.LoadScene untuk dapat kembali ke Playing Screen.
+
+Untuk Exit, dapat menggunakan Application.Quit() untuk exit dari aplikasinya. Jangan lupa gunakan Debug.Log untuk mengecek apakah button tersebut dapat digunakan atau tidak~
+
+Sekarang, ayo kita implementasikan script yang telah dibuat tadi ke button di scene!
+
+Gunakan UI -> Image untuk membuat button yang akan digunakan.
+
+![image](https://user-images.githubusercontent.com/80830860/194742251-c293bb66-5920-442c-bca5-6efec288c35e.png)
+
+Canvas akan otomatis terbuat dan sekarang, klik Canvas sekali dan masukkan script yang telah terbuat ke component Canvas tersebut.
+
+![image](https://user-images.githubusercontent.com/80830860/194742347-3ca4d42e-9ce8-4690-a9f8-abddecbd3e62.png)
+
+(Gambar hanya sebagai ilustrasi, silahkan kreasikan sesuka hati!)
+
+Kemudian, klik kembali Image yang dibuat tadi, dan masukkan component Button.
+
+![image](https://user-images.githubusercontent.com/80830860/194742371-26619019-8f88-47e9-a875-aadbe2675b5d.png)
+
+Selanjutnya, dengan Image masih terhighlight, klik + di Inspector bagian "On Click ()" dan drag canvas ke tempat object yang tersedia.
+
+Before?
+
+![image](https://user-images.githubusercontent.com/80830860/194742425-c27fcbb1-bb40-48cd-a8f1-9e3ec6c4d5db.png)
+
+After!
+
+![image](https://user-images.githubusercontent.com/80830860/194742433-914374e5-2427-46bd-aca5-25b6a85db27a.png)
+
+Button masih belum dapat digunakan karena kita belum melaksanakan langkah yang tidak kalah pentingnya. Klik function apa yang akan digunakan button tersebut untuk dijalankan!
+
+![image](https://user-images.githubusercontent.com/80830860/194742478-0bd54e39-8685-415e-8590-72bf8fd2a152.png)
+
+Sebagai langkah terakhir, masukkan Scene yang telah terbuat ke Build Settings agar dapat diakses oleh SceneManager.
+
+![image](https://user-images.githubusercontent.com/80830860/194742630-5ce9db25-f732-4ffe-b027-bef81c81796e.png)
+
+Dan klik "Add Open Scenes" hingga semua scene yang telah kalian buat masuk ke daftar!
+
+![image](https://user-images.githubusercontent.com/80830860/194742691-3a55d9c7-afb5-4feb-9ce7-a6e31364615a.png)
+
+Cobalah run di Unity~
+
+Implementasikan yang telah dipelajari diatas untuk membuat Finish Screen sebagai "syarat menang" dari game ini!
 
 ## build to desired platform (pc for this game)
 
-here
+Wah, tak terasa game kita telah selesai. Tinggal kita jadikan game ini sebagai sebuah aplikasi, nih. Gimana caranya?
+
+Masuk kembali ke Build Settings (atau Ctrl + Shift + B)
+
+![image](https://user-images.githubusercontent.com/80830860/194742765-a48ffb12-7d69-4f2f-b8ef-5b071b69d456.png)
+
+Klik platform yang diinginkan (untuk kesempatan kali ini, gunakan "Windows, Mac, Linux"), dan klik "Build". Select folder tempat project tersebut akan di-build.
+
+![image](https://user-images.githubusercontent.com/80830860/194742874-92242784-d10f-4def-837a-848650668e51.png)
+
+Sudah ter-built? Coba aplikasimu dengan menjalankan file yang bernama sama dengan project-mu tadi!
 
 # amogus sussy baka
